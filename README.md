@@ -8,8 +8,8 @@ The input images are 31x31 gray-scale images, where every pixel value is the int
 The output is the estimated value of the center pixel. 
 
 <p float="left">
-  <img src="https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img1.png" width="100" />
-  <img src="https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img2.png" width="100" /> 
+  <img src="https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img1.png" width="600" />
+  <img src="https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img2.png" width="600" /> 
 </p>
 
 ![Test-set example](https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img1.png) 
