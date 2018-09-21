@@ -6,3 +6,7 @@ Similar to Super-Resolution, but for the center pixel only: here the goal is to 
 
 The input images are 31x31 gray-scale images, where every pixel value is the intensity, ranging up to ~3000.
 The output is the estimated value of the center pixel. 
+
+![Test-set example](images/Train_img1.png)
+![Test-set example](images/Figure_4.png)
+
