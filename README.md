@@ -8,5 +8,5 @@ The input images are 31x31 gray-scale images, where every pixel value is the int
 The output is the estimated value of the center pixel. 
 
 ![Test-set example](https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img1.png)
-![Test-set example](images/Figure_4.png)
+![Test-set example](https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Figure_4.png)
 
