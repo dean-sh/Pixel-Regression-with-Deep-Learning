@@ -7,6 +7,11 @@ Similar to Super-Resolution, but for the center pixel only: here the goal is to 
 The input images are 31x31 gray-scale images, where every pixel value is the intensity, ranging up to ~3000.
 The output is the estimated value of the center pixel. 
 
+<p float="left">
+  <img src="https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img1.png" width="100" />
+  <img src="https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img2.png" width="100" /> 
+</p>
+
 ![Test-set example](https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img1.png) 
 ![Test-set example](https://github.com/deansh64/Pixel-Regression-Using-Deep-Learning/blob/master/Images/Train_img2.png)
 
