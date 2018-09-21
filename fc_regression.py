@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-"""### **Training**"""
 
 import matplotlib.pyplot as plt
 import random
