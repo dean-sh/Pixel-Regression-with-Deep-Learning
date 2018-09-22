@@ -29,7 +29,6 @@ def plot_image(an_image):
     plt.colorbar()
     plt.show(block=True)
 
-
 # TODO completing the images in the train set to find min-max values
 def image_completion(image_set):
     array = np.array(image_set['x_data'])
