@@ -10,6 +10,8 @@ from keras import backend as K
 import keras
 from keras.callbacks import TensorBoard
 import tensorflow as tf
+from keras.callbacks import ModelCheckpoint
+
 
 
 
@@ -28,6 +30,7 @@ def plot_image(an_image):
     plt.imshow(an_image)
     plt.colorbar()
     plt.show(block=True)
+
 
 # TODO completing the images in the train set to find min-max values
 def image_completion(image_set):
@@ -164,7 +167,7 @@ augmentation_size = 11
 input_size = (augmentation_size, augmentation_size, 1)
 
 batch_size = 64
-epochs = 100
+epochs =100
 
 def input_handling_and_saving():
   (x_train, y_train) = data_augmentation(norm_x, augmentation_size)
@@ -247,9 +250,13 @@ def input_loading():
   
 (x_train, y_train, x_val, y_val, x_test, y_test) = input_loading()
 
+########################################
+#CNN -> FC method: these lines convert the input data to 4d numpy image.
 x_train = np.reshape(x_train, (x_train.shape[0], augmentation_size, augmentation_size, 1))
 x_test = np.reshape(x_test, (x_test.shape[0], augmentation_size, augmentation_size, 1))
 x_val = np.reshape(x_val, (x_val.shape[0], augmentation_size, augmentation_size, 1))
+########################################
+
 
 print('train shape:', x_train.shape, y_train.shape)
 print(x_train.shape[0], 'train samples')
@@ -268,19 +275,23 @@ print(x_test.shape[0], 'test samples')
 model = Sequential()
 model.add(Conv2D(32, (5, 5), padding='same', strides=(2, 2), activation='relu', input_shape=input_size))
 model.add(Conv2D(64, (5, 5), padding='same', strides=(2, 2), activation='relu'))
+model.add(Dropout(0.2))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(Dropout(0.05))
+
+model.add(Conv2D(128, (3, 3), padding='same', strides=(1, 1), activation='relu', input_shape=input_size))
+model.add(Dropout(0.2))
 
 model.add(Flatten())
-model.add(Dense(512, activation='relu', input_dim=input_size, kernel_initializer='normal'))
-model.add(Dropout(0.05))
-model.add(Dense(512, activation='relu', input_dim=input_size, kernel_initializer='normal'))
-model.add(Dropout(0.05))
+model.add(Dense(512, activation='relu', kernel_initializer='normal'))
+model.add(Dropout(0.2))
+model.add(Dense(512, activation='relu', kernel_initializer='normal'))
+model.add(Dropout(0.2))
 model.add(Dense(1, kernel_initializer='normal'))
 
 # print(model.summary())
 
-mc = keras.callbacks.ModelCheckpoint('weights{epoch:08d}.h5', save_weights_only=True, period=50)
+filepath='drive/elisra_dl_course_project/Regression_CNN_2_1.weights-improvement-{epoch:02d}.h5'
+mc = ModelCheckpoint(filepath, monitor='val_loss', verbose=1, save_best_only=True, mode='auto', save_weights_only=True)
 
 tbCallBack = TensorBoard(log_dir='./log', histogram_freq=1,
                          write_graph=True,
@@ -313,4 +324,5 @@ plt.show(block=True)
 
 from keras.models import load_model
 
-model.save('drive/elisra_dl_course_project/Regression_CNN_1_1.h5')  # creates a HDF5 file 'my_model.h5'
+model.save('drive/elisra_dl_course_project/Regression_CNN_2_1.h5')  # creates a HDF5 file 'my_model.h5'
+
