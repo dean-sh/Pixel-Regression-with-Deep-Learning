@@ -1,4 +1,4 @@
-# Pixel-Regression-with-Deep-Learning
+# Pixel Regression with Deep Learning
 This project's goal is to model a deep learning network to estimate the center pixel of an infra-red (IR) image.
 
 ## The Solution:
