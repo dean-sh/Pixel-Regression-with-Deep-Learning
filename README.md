@@ -4,6 +4,7 @@
 ## **The Challenge**:
 
 This project's goal is to model a deep learning network to estimate the center pixel of an infra-red (IR) image.
+
 <img src="https://github.com/dean-sh/Pixel-Regression-with-Deep-Learning/blob/master/images/train_img1.png" width="500" height="450" />
 
 ## The Solution:
