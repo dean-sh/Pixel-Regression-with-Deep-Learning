@@ -1,8 +1,10 @@
 # Pixel Regression with Deep Learning
 
+
 ## **The Challenge**:
 
 This project's goal is to model a deep learning network to estimate the center pixel of an infra-red (IR) image.
+![Dataset Example](https://github.com/dean-sh/Pixel-Regression-with-Deep-Learning/blob/master/images/train_img1.png)
 
 ## The Solution:
 The work on this project was divided to several categories.
@@ -21,4 +23,26 @@ The work on this project was divided to several categories.
 I've been experimenting with different network architectures and training schemes to optimize the performance of the model.
  1. **Pixel Classification** - Using classic deep learning classification models, with Softmax activation on a `3000x1` output vector, where the index corresponds to the pixel value.
  2. **Fully Connected Regression** - Using several layers in a Fully-Connected neural network, where the last layer has 1 neuron as a regression problem.
- 3. **CNN Regression** - Using several Conv2D layers, some MaxPooling and RelU activation, Flattened and connected to FC layers as in #2. The idea is that the CNN filters will learn spatial information from the real-world images and help the regression accuracy.	   
+ 3. **CNN Regression** - Using several Conv2D layers, some MaxPooling and RelU activation, Flattened and connected to FC layers as in #2. The idea is that the CNN filters will learn spatial information from the real-world images and help the regression accuracy.	
+
+**Parameters Tuning**
+ 1. Optimizer- **Adam**, SGD, adaGrad. 
+ 2. Loss: **MSE**, MSLE, MAE as losses for regression.
+ 3. **Batch Size - 64** was proven to gain the lowest error. 
+ 4. R2 as Train and Validation Metrics
+
+ **Best Architecture**
+ 
+
+Libraries used in the project:
+
+ - Tensorflow
+ - Keras
+ - numpy
+ - sklearn
+ - Pandas
+ - SciPy
+ - matplotlib
+ - statistics
+ - ngrok localhost tunnel
+ 
