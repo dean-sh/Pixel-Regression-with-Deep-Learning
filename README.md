@@ -1,4 +1,4 @@
-# Pixel Regression with Deep Learning
+# PixelNet - Pixel prediction with Deep Learning
 
 
 ## **The Challenge**:
@@ -30,10 +30,7 @@ I've been experimenting with different network architectures and training scheme
  1. Optimizer- **Adam**, SGD, adaGrad. 
  2. Loss: **MSE**, MSLE, MAE as losses for regression.
  3. **Batch Size - 64** was proven to gain the lowest error. 
- 4. R2 as Train and Validation Metrics
-
- **Best Architecture**
- 
+ 4. R2 as Train and Validation Metrics 
 
 Libraries used in the project:
 
