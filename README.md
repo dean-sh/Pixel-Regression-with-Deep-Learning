@@ -44,3 +44,7 @@ Libraries used in the project:
  - statistics
  - ngrok localhost tunnel
  
+ **Model Architecture:**
+ 
+<img src="https://github.com/dean-sh/Pixel-Regression-with-Deep-Learning/blob/master/Architecture/train_img1.png" width="500" height="450" />
+
