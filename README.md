@@ -46,5 +46,5 @@ Libraries used in the project:
  
  **Model Architecture:**
  
-<img src="https://github.com/dean-sh/PixelNet/blob/master/Architecture/model.png" width="500" height="1000" />
+<img src="https://github.com/dean-sh/PixelNet/blob/master/Architecture/model.png" width="300" height="700" />
 
